@@ -1,1 +1,14 @@
+package osproject;
 
+import java.util.Scanner;
+
+
+public class Osproject {
+     public static void main(String[] args)
+	{
+    
+    }
+    
+    
+    
+    }
