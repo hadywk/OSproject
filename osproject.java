@@ -8,7 +8,30 @@ public class Osproject {
 	{
     
     }
-    
+     static void firstFIt(int blockSize[], int processSize[]){
+            int m = blockSize.length;
+            int n = processSize.length;
+            int allocatedMemory[] = new int[m];
+            for(int i =0;i<m;i++){
+                allocatedMemory[i]=-1;
+            }
+              for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < m; j++)
+            {
+                if (blockSize[j] >= processSize[i]&& allocatedMemory[j]==-1)
+                {
+                    
+                    allocatedMemory[j] = processSize[i];
+     break;
+                   
+                }
+            }
+        }
+              printResults(allocatedMemory,blockSize);
+     
+}
+
      static void printResults(int allocatedMemory[], int blockSize[]){
              for(int i=0;i<allocatedMemory.length;i++){
                 if(allocatedMemory[i]!=-1)
