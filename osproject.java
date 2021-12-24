@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Osproject {
      public static void main(String[] args)
 	{
+	     algorithmChoice();
     
     }
      static void firstFIt(int blockSize[], int processSize[]){
@@ -118,5 +119,14 @@ public class Osproject {
             
             printResults(allocatedMemory,blockSize);
 	}
-    
+     static void algorithmChoice(){
+            System.out.println("Best Fit , Worst Fit , First Fit /n");
+            Scanner scan = new Scanner(System.in);
+            String input = scan.nextLine();
+            switch(input.toLowerCase()){
+                case "best fit":bestFit(inputBlocks(),inputProcesses());break;
+                case "worst fit":worstFit(inputBlocks(),inputProcesses());break;
+                case "first fit":break;
+            }
+        }
     }
