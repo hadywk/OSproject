@@ -126,7 +126,7 @@ public class Osproject {
             switch(input.toLowerCase()){
                 case "best fit":bestFit(inputBlocks(),inputProcesses());break;
                 case "worst fit":worstFit(inputBlocks(),inputProcesses());break;
-                case "first fit":break;
+                case "first fit":firstFIt(inputBlocks(),inputProcesses());break;
             }
         }
     }
