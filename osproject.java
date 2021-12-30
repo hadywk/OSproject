@@ -6,9 +6,12 @@ import java.util.Scanner;
 public class Osproject {
      public static void main(String[] args)
 	{
+	 	//starting with choosing the algorithm and the whole execution
 	     algorithmChoice();
     
     }
+	
+	//function where it assignes the process to the first block that is big enough to take the process
      static void firstFIt(int blockSize[], int processSize[]){
             int m = blockSize.length;
             int n = processSize.length;
@@ -32,6 +35,8 @@ public class Osproject {
               printResults(allocatedMemory,blockSize);
      
 }
+	
+	//function where the the processes are assigned to the blocks that will result a large internal fragmentation
 	static void worstFit(int blockSize[], int processSize[])
 	{
             // assigning default value to all array elements
@@ -60,12 +65,16 @@ public class Osproject {
            printResults(allocatedMemory,blockSize);
 	}
 
+	
+	//function to print the results of the allocated array depending on the algorithm used.
      static void printResults(int allocatedMemory[], int blockSize[]){
              for(int i=0;i<allocatedMemory.length;i++){
                 if(allocatedMemory[i]!=-1)
                     System.out.println("Process Size "+ allocatedMemory[i]+ " => Block Size "+blockSize[i]);
             }
         }
+	
+	// getting user input for the block sizes
         static int[] inputBlocks(){
             
             System.out.println("Enter number of Blocks");
@@ -79,6 +88,8 @@ public class Osproject {
             return Blocks;
         }
         
+	
+	//getting user input for the processes sizes
         static int[] inputProcesses(){
             
             System.out.println("Enter number of Processes/n");
@@ -91,6 +102,9 @@ public class Osproject {
             }
             return Processes;
         }
+	
+	
+	//function where the process is assigned to the block that is big enough to take the process and also with smallest internal fragmentation.
 	static void bestFit(int blockSize[], int processSize[])
 	{
             // assigning default value to all array elements
@@ -119,6 +133,8 @@ public class Osproject {
             
             printResults(allocatedMemory,blockSize);
 	}
+	
+	//user choices of the algorithm used on the allocation of data
      static void algorithmChoice(){
             System.out.println("Best Fit , Worst Fit , First Fit /n");
             Scanner scan = new Scanner(System.in);
