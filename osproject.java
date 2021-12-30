@@ -6,12 +6,14 @@ import java.util.Scanner;
 public class Osproject {
      public static void main(String[] args)
 	{
-	 	//starting with choosing the algorithm and the whole execution
+	 	//starting with choosing the algorithm 
+	     //and the whole execution begins here
 	     algorithmChoice();
     
     }
 	
 	//function where it assignes the process to the first block that is big enough to take the process
+	
      static void firstFIt(int blockSize[], int processSize[]){
             int m = blockSize.length;
             int n = processSize.length;
@@ -67,6 +69,7 @@ public class Osproject {
 
 	
 	//function to print the results of the allocated array depending on the algorithm used.
+	// as it shows for every process size, the block size that it be partitioned in
      static void printResults(int allocatedMemory[], int blockSize[]){
              for(int i=0;i<allocatedMemory.length;i++){
                 if(allocatedMemory[i]!=-1)
@@ -74,7 +77,8 @@ public class Osproject {
             }
         }
 	
-	// getting user input for the block sizes
+	// getting user input for number of the block
+	// and the sizes of blocks in memory
         static int[] inputBlocks(){
             
             System.out.println("Enter number of Blocks");
@@ -89,7 +93,8 @@ public class Osproject {
         }
         
 	
-	//getting user input for the processes sizes
+	//getting user input for the processes number
+	//and the size of each process 
         static int[] inputProcesses(){
             
             System.out.println("Enter number of Processes/n");
@@ -135,6 +140,7 @@ public class Osproject {
 	}
 	
 	//user choices of the algorithm used on the allocation of data
+	//after setting the blocks in memory and the process size needed
      static void algorithmChoice(){
             System.out.println("Best Fit , Worst Fit , First Fit /n");
             Scanner scan = new Scanner(System.in);
